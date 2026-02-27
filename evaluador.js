@@ -11,3 +11,4 @@ if (nota>= 90 && nota <=100){
 } else {
     console.log("Valor no valido");
 }
+/* notas importantes, en js el and es $$, || es or y ! es not*/
