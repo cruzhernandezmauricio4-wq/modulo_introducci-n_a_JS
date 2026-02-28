@@ -1,0 +1,193 @@
+/* ===== FONDO GENERAL ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: radial-gradient(circle at 20% 20%, #0a1f3c, #050b18 70%);
+  color: #e6f1ff;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  width: 380px;
+  padding: 35px;
+  border-radius: 20px;
+
+  background: rgba(20, 40, 70, 0.35);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 170, 255, 0.4);
+
+  box-shadow:
+    0 0 25px rgba(0, 150, 255, 0.3),
+    inset 0 0 20px rgba(0, 150, 255, 0.1);
+}
+
+/* ===== TÍTULO ===== */
+.container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #66cfff;
+}
+
+/* ===== DISPLAY PASSWORD ===== */
+.display {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.display input {
+  flex: 1;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid rgba(0, 170, 255, 0.4);
+  background-color: #081826;
+  color: #66cfff;
+  outline: none;
+}
+
+.display button {
+  padding: 12px 18px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid rgba(0, 170, 255, 0.4);
+  border-left: none;
+
+  background: linear-gradient(145deg, #0f2f55, #0a1f3c);
+  color: #66cfff;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.display button:hover {
+  background: linear-gradient(145deg, #124a85, #0f2f55);
+  box-shadow: 0 0 10px #00aaff;
+}
+
+/* ===== SLIDER ===== */
+input[type="range"] {
+  width: 100%;
+  margin: 15px 0;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #0077ff, #00cfff);
+  outline: none;
+}
+
+/* Slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00cfff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00cfff;
+}
+
+/* ===== CHECKBOXES ===== */
+.options label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.options input[type="checkbox"] {
+  accent-color: #00cfff;
+  margin-right: 8px;
+}
+
+/* ===== BOTÓN GENERAR ===== */
+button#generate {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(0, 170, 255, 0.4);
+
+  background: linear-gradient(145deg, #0077ff, #004c99);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#generate:hover {
+  background: linear-gradient(145deg, #0099ff, #0066cc);
+  box-shadow: 0 0 15px #00aaff;
+  transform: translateY(-2px);
+}
+
+/* ===== FUERZA ===== */
+.strength {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #66cfff;
+}
+/* ===== STRENGTH SECTION ===== */
+.strength-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111522;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.strength-label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.strength-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bars {
+  display: flex;
+  gap: 5px;
+}
+
+.bar {
+  width: 8px;
+  height: 25px;
+  border: 2px solid #888;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* Colores dinámicos */
+.bar.weak {
+  background-color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+.bar.medium {
+  background-color: #ffb84d;
+  border-color: #ffb84d;
+}
+
+.bar.good {
+  background-color: #4da6ff;
+  border-color: #4da6ff;
+}
+
+.bar.strong {
+  background-color: #4dff88;
+  border-color: #4dff88;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <div class="display">
+            <input type="text" id="password" readonly>
+            <button id="copy">copiar</button>
+        </div>
+
+        <div class="controls">
+
+            <label>
+                Longitud:
+                <span id="lengthValue">10</span>
+            </label>
+            <input type="range" id="length" min="8" max="30" value="10">
+
+            <div class="options">
+                <label><input type="checkbox" id="uppercase" checked> Mayúsculas</label>
+                <label><input type="checkbox" id="lowercase" checked> Minúsculas</label>
+                <label><input type="checkbox" id="numbers" checked> Números</label>
+                <label><input type="checkbox" id="symbols"> Símbolos</label>
+            </div>
+
+            <div class="strength">
+                <span>Fuerza:</span>
+                <span id="strengthText">MEDIUM</span>
+            </div>
+            <div class="strength-container">
+                <span class="strength-label">STRENGTH</span>
+
+                <div class="strength-right">
+                    <span id="strengthText">WEAK</span>
+
+                    <div class="bars">
+                        <div class="bar" id="bar1"></div>
+                        <div class="bar" id="bar2"></div>
+                        <div class="bar" id="bar3"></div>
+                        <div class="bar" id="bar4"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="generate">GENERAR</button>
+
+        </div>
+    </div>
+
+    <script src="contraseñas.js"></script>
+</body>
+
+</html>
